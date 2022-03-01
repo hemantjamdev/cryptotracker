@@ -89,6 +89,7 @@ class CryptoCurrency {
   String? atlDate;
   Roi? roi;
   String? lastUpdated;
+  bool isFav=false;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
