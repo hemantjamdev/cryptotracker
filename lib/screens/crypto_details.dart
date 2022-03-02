@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cryptotracker/helper/colors.dart';
 import 'package:cryptotracker/models/crypto_model.dart';
 import 'package:cryptotracker/notifier/crypto_notifier.dart';
 import 'package:flutter/material.dart';
@@ -21,14 +22,9 @@ class _CryptoDetailState extends State<CryptoDetail> {
     return Column(
       crossAxisAlignment: crossAxisAlignment,
       children: [
-        Text(
-          title,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-        ),
-        Text(
-          detail,
-          style: const TextStyle(fontSize: 17),
-        ),
+        Text(title,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+        Text(detail, style: const TextStyle(fontSize: 17)),
       ],
     );
   }
@@ -68,7 +64,7 @@ class _CryptoDetailState extends State<CryptoDetail> {
                       ListTile(
                         contentPadding: const EdgeInsets.all(0),
                         leading: CircleAvatar(
-                          backgroundColor: Colors.white,
+                          backgroundColor: white,
                           backgroundImage:
                               CachedNetworkImageProvider(currentCrypto.image!),
                         ),
@@ -82,7 +78,7 @@ class _CryptoDetailState extends State<CryptoDetail> {
                         subtitle: Text(
                           "₹ " + currentCrypto.currentPrice!.toStringAsFixed(4),
                           style: const TextStyle(
-                              color: Colors.deepPurple,
+                              color: deepPurple,
                               fontSize: 30,
                               fontWeight: FontWeight.bold),
                         ),
@@ -109,24 +105,22 @@ class _CryptoDetailState extends State<CryptoDetail> {
                                 // negative
                                 return Text(
                                   "${priceChangePercentage.toStringAsFixed(2)}% (${priceChange.toStringAsFixed(4)})",
-                                  style: const TextStyle(
-                                      color: Colors.red, fontSize: 23),
+                                  style:
+                                      const TextStyle(color: red, fontSize: 23),
                                 );
                               } else {
                                 // positive
                                 return Text(
                                   "+${priceChangePercentage.toStringAsFixed(2)}% (+${priceChange.toStringAsFixed(4)})",
                                   style: const TextStyle(
-                                      color: Colors.green, fontSize: 23),
+                                      color: green, fontSize: 23),
                                 );
                               }
                             },
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 30,
-                      ),
+                      const SizedBox(height: 30),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -141,9 +135,7 @@ class _CryptoDetailState extends State<CryptoDetail> {
                               CrossAxisAlignment.end),
                         ],
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -157,9 +149,7 @@ class _CryptoDetailState extends State<CryptoDetail> {
                               CrossAxisAlignment.end),
                         ],
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -171,9 +161,7 @@ class _CryptoDetailState extends State<CryptoDetail> {
                               CrossAxisAlignment.start),
                         ],
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

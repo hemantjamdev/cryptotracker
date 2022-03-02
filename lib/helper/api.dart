@@ -1,12 +1,11 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 
 class API {
-  static Future<List<dynamic>> getMarkets() async {
+  static Future<List<dynamic>> getMarkets(int perPage) async {
     try {
       Uri requestPath = Uri.parse(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=20&page=1&sparkline=false");
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=$perPage&page=1&sparkline=false");
 
       var response = await http.get(requestPath);
       var decodedResponse = jsonDecode(response.body);

@@ -1,3 +1,4 @@
+import 'package:cryptotracker/helper/colors.dart';
 import 'package:cryptotracker/notifier/theme_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +15,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
-
   @override
   void initState() {
     super.initState();
@@ -41,14 +41,11 @@ class _HomePageState extends State<HomePage>
                   const Text("Crypto Tracker", style: TextStyle(fontSize: 42)),
                   Consumer<ThemeNotifier>(
                     builder: (context, theme, child) {
-                      //   print("theme icon button");
-                      return IconButton(
-                        onPressed: () => theme.toggleTheme(),
-                        icon: Icon(
-                          theme.themeData == theme.lightTheme
-                              ? Icons.nights_stay
-                              : Icons.wb_sunny,
-                        ),
+                      return GestureDetector(
+                        onTap: () => theme.toggleTheme(),
+                        child: theme.themeData == theme.lightTheme
+                            ? const Icon(Icons.nights_stay)
+                            : const Icon(Icons.wb_sunny, color: yellow),
                       );
                     },
                   )

@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cryptotracker/helper/colors.dart';
 import 'package:cryptotracker/models/crypto_model.dart';
 import 'package:cryptotracker/notifier/crypto_notifier.dart';
 import 'package:cryptotracker/screens/crypto_details.dart';
@@ -14,7 +15,7 @@ class CryptoTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 5,
-      shadowColor: Colors.black,
+      shadowColor: black,
       child: ListTile(
         onTap: () {
           Navigator.push(
@@ -41,9 +42,7 @@ class CryptoTile extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 10),
-            Consumer<CryptoNotifier>(
-
-                builder: (context, cryptoNotifier, child) {
+            Consumer<CryptoNotifier>(builder: (context, cryptoNotifier, child) {
               return (crypto.isFav == false)
                   ? GestureDetector(
                       onTap: () {
@@ -61,7 +60,7 @@ class CryptoTile extends StatelessWidget {
                       child: const Icon(
                         CupertinoIcons.heart_fill,
                         size: 18,
-                        color: Colors.red,
+                        color: red,
                       ),
                     );
             })
@@ -83,12 +82,12 @@ class CryptoTile extends StatelessWidget {
               if (priceChange < 0) {
                 return Text(
                   "${priceChangePer.toStringAsFixed(2)}% (${priceChange.toStringAsFixed(2)})",
-                  style: const TextStyle(color: Colors.red),
+                  style: const TextStyle(color: red),
                 );
               } else {
                 return Text(
                   "+${priceChangePer.toStringAsFixed(2)}% (+${priceChange.toStringAsFixed(2)})",
-                  style: const TextStyle(color: Colors.green),
+                  style: const TextStyle(color: green),
                 );
               }
             }),

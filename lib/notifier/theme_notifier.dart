@@ -1,9 +1,10 @@
+import 'package:cryptotracker/helper/colors.dart';
 import 'package:cryptotracker/local_storage/local_storage.dart';
 import 'package:flutter/material.dart';
 
 class ThemeNotifier with ChangeNotifier {
   ThemeData lightTheme = ThemeData(
-      primarySwatch: Colors.deepPurple, scaffoldBackgroundColor: Colors.white);
+      primarySwatch: Colors.deepPurple, scaffoldBackgroundColor: white);
   ThemeData darkTheme = ThemeData.dark();
   late ThemeData themeData;
 
