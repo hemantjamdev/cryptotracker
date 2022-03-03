@@ -7,6 +7,13 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'helper/strings.dart';
 
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  String currentTheme = await LocalStorage.getTheme() ?? "light";
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) => runApp(CryptoTrackerApp(currentTheme: currentTheme)));
+}
+
 class CryptoTrackerApp extends StatelessWidget {
   final String currentTheme;
 
@@ -36,32 +43,4 @@ class CryptoTrackerApp extends StatelessWidget {
       ),
     );
   }
-}/*
-class Splash extends StatelessWidget {
-  const Splash({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      child: Container(
-        padding: EdgeInsets.all(40),
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        color: Colors.white,
-        child: CircleAvatar(
-          backgroundColor: Colors.deepPurple,
-          child: Center(
-              child: Text(r"$",style: TextStyle(fontSize: 300,color: Colors.white),)),
-        ),
-      ),
-    );
-  }
-}
-*/
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  String currentTheme = await LocalStorage.getTheme() ?? "light";
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((value) => runApp(CryptoTrackerApp(currentTheme: currentTheme)));
 }
