@@ -1,13 +1,13 @@
-<img src="https://user-images.githubusercontent.com/60656624/169771465-c6f3bc3e-92b7-4a52-8bc6-7c0319f0822a.png" width=“300” height=“500”>
+
 # cryptotracker
-<img src="https://user-images.githubusercontent.com/60656624/169771465-c6f3bc3e-92b7-4a52-8bc6-7c0319f0822a.png" width=“300” height=“500”>
+<img src="https://user-images.githubusercontent.com/60656624/169771438-00bcdd1d-5073-4097-a4f6-ad8f48c29e87.png" width=“300” height=“600”>
 A new Flutter application.
 <img src="https://user-images.githubusercontent.com/60656624/169771438-00bcdd1d-5073-4097-a4f6-ad8f48c29e87.png" width=“300” height=“500”>
 <img src="https://user-images.githubusercontent.com/60656624/169771450-256187c0-7057-46c3-9e97-f296765c1af9.png" width=“300” height=“500”>
 <img src="https://user-images.githubusercontent.com/60656624/169771458-1431ee45-3463-4b5f-81e7-bc989205027e.png" width=“300” height=“500”>
 <img src="https://user-images.githubusercontent.com/60656624/169771465-c6f3bc3e-92b7-4a52-8bc6-7c0319f0822a.png" width=“300” height=“500”>
 ## Getting Started
-<img src="https://user-images.githubusercontent.com/60656624/169771465-c6f3bc3e-92b7-4a52-8bc6-7c0319f0822a.png" width=“300” height=“500”>
+
 
 This project is a starting point for a Flutter application.
 
