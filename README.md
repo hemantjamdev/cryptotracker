@@ -1,5 +1,6 @@
 
 # cryptotracker
+<img src="https://user-images.githubusercontent.com/60656624/169227361-61a11c59-2112-4096-89f6-66d5c810c520.png" width="300" height="600">
 <img src="https://user-images.githubusercontent.com/60656624/169771438-00bcdd1d-5073-4097-a4f6-ad8f48c29e87.png" width=“300” height=“600”>
 A new Flutter application.
 <img src="https://user-images.githubusercontent.com/60656624/169771438-00bcdd1d-5073-4097-a4f6-ad8f48c29e87.png" width=“300” height=“500”>
